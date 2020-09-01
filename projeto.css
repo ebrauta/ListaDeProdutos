@@ -4,14 +4,21 @@ body{
 ul li{
     font-size: 18px;
     font-family: serif;
+    color: #dedede;
     width: 35vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 span{
     color: white;
+    width: 50%;
 }
+input[type='number']{
+    width: 35px;
+    float: left;
+}
+
 #total, #lista{
     color: white
 }
@@ -24,5 +31,5 @@ span{
     position: absolute;
     top: 50vh;
     left: 20px;
-
+    display: flex;
 }
