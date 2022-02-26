@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="projeto.css">
-    <title>Lista de  Preços</title>
-</head>
-<body>
-    <h1>Lista de Eletrônicos</h1>
-    <div id='root'></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="projeto.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Lista de Preços</title>
+  </head>
+  <body>
+    <header><h1>Lista de Eletrônicos</h1></header>
+    <div class="container">
+      <sidebar id="side">
+        <h2>Lista de compras</h2>
+      </sidebar>
+      <main id="root"></main>
+    </div>
+    <footer id="resultado">Total: R$ 0,00</footer>
     <script src="projeto.js"></script>
-</body>
+  </body>
 </html>
