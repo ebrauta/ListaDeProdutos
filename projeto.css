@@ -49,7 +49,7 @@ sidebar > ul {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.164),
     rgba(5, 5, 15, 0.9)
   );
   display: flex;
@@ -57,19 +57,25 @@ sidebar > ul {
   align-content: stretch;
 }
 sidebar > ul li {
-  color: rgba(10, 10, 10, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
   font-family: "Comfortaa", cursive;
 }
+#side {
+  background-color: #6dded3ec;
+  position: relative;
+}
 .clearAll {
   position: absolute;
-  bottom: 0;
-  left: 5vw;
+  bottom: 10px;
+  left: 10px;
   padding: 5px 10px;
   border-radius: 10px;
   color: yellow !important;
 }
-
+.clearAll:hover {
+  transform: scale(1.3);
+}
 #root {
   width: 80vw;
   overflow-x: hidden;
@@ -181,4 +187,61 @@ footer {
   border-top: 1px solid white;
   line-height: 10vh;
   padding-left: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    background-size: cover;
+    background-repeat: repeat-y;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  #side {
+    width: 100%;
+    height: auto;
+  }
+  #side ul,
+  #side ul li {
+    width: 100%;
+  }
+  #root ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  #root ul li,
+  #root ul li span,
+  #root ul li .btngroup {
+    width: 110px;
+  }
+  footer {
+    top: 0;
+  }
+  /* .clearAll {
+    top: 5px;
+    height: 40px;
+  } */
+}
+
+@media screen and (min-width: 415px) and (max-width: 1279px) {
+  #root ul {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    align-items: center;
+    justify-content: start;
+    gap: 10vw;
+  }
+  #root ul li,
+  #root ul li span,
+  #root ul li .btngroup {
+    width: 15vw;
+  }
+  #side {
+    height: 60vh;
+    width: 30vw;
+  }
 }
